@@ -82,7 +82,7 @@ AS (SELECT cte3.Username,
                     BETWEEN (cte3.TotalAverage / 2) AND cte3.TotalAverage  THEN
                    3
                WHEN cte3.CustomerLifeTime
-                     > cte3.TotalAverage AND cte3.CustomerLifeTime < (cte3.TotalAverage *1.25) THEN
+                     > cte3.TotalAverage AND cte3.CustomerLifeTime < (cte3.TotalAverage *1.5) THEN
                    2
                ELSE
                    1
@@ -94,7 +94,7 @@ AS (SELECT cte3.Username,
                     BETWEEN (cte3.PaymentAverage / 2) AND cte3.PaymentAverage THEN
                    3
 				WHEN cte3.totalPayment
-                    BETWEEN cte3.TotalAverage AND (cte3.TotalAverage * 1.25) THEN
+                    BETWEEN cte3.TotalAverage AND (cte3.TotalAverage * 1.5) THEN
                    2
                ELSE
                    1
